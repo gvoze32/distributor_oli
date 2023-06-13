@@ -234,8 +234,8 @@ class _LoginState extends State<Login> {
                             child: IconButton(
                               icon: Image.asset(
                                 _passwordVisible
-                                    ? 'assets/icons/closedeye.png'
-                                    : 'assets/icons/eye.png',
+                                    ? 'assets/icons/eye.png'
+                                    : 'assets/icons/closedeye.png',
                               ),
                               onPressed: () {
                                 setState(() {
