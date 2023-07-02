@@ -3,7 +3,7 @@ import 'package:double_back_to_close_app/double_back_to_close_app.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:distributor_oli/dashboard.dart';
+import 'package:distributor_oli/navigation.dart';
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
@@ -34,7 +34,7 @@ class _LoginState extends State<Login> {
     if (users.containsKey(username) && users[username] == password) {
       // Login successful, handle the result
       // For example, navigate to the home screen
-      Get.off(() => Dashboard());
+      Get.off(() => Navigation());
     } else {
       // Login failed, handle the error
       // Display an error message or show a dialog
@@ -69,18 +69,33 @@ class _LoginState extends State<Login> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 10,
+              height: 70,
             ),
             Center(
-              child: Container(
-                height: 350,
-                width: 350,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/loginillust.png"),
+              child: Column(
+                children: [
+                  Container(
+                    height: 150,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/logoborderless.png"),
+                      ),
+                    ),
                   ),
-                ),
+                  Text(
+                    "Welcome to Distributor Oli",
+                    style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
               ),
+            ),
+            SizedBox(
+              height: 70,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -91,7 +106,7 @@ class _LoginState extends State<Login> {
                     child: Text(
                       "Username",
                       style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w500,
                         color: Colors.black,
                         fontSize: 16,
                       ),
@@ -168,7 +183,7 @@ class _LoginState extends State<Login> {
                     child: Text(
                       "Password",
                       style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w500,
                         color: Colors.black,
                         fontSize: 16,
                       ),
@@ -267,7 +282,7 @@ class _LoginState extends State<Login> {
                         child: SizedBox(
                           child: Checkbox(
                             value: check,
-                            activeColor: HexColor("#634FF4"),
+                            activeColor: HexColor("#008FB7"),
                             onChanged: (bool? value) {
                               setState(() {
                                 check = value;
@@ -280,7 +295,7 @@ class _LoginState extends State<Login> {
                         "Remember me",
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w500,
-                          color: HexColor("634FF4"),
+                          color: HexColor("#014558"),
                           fontSize: 12,
                         ),
                       )
@@ -291,7 +306,7 @@ class _LoginState extends State<Login> {
                         "Forgot Password ?",
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w500,
-                          color: HexColor("634FF4"),
+                          color: HexColor("#014558"),
                           fontSize: 12,
                         ),
                       ),
@@ -301,7 +316,7 @@ class _LoginState extends State<Login> {
               ],
             ),
             SizedBox(
-              height: 10,
+              height: 42,
             ),
             Center(
                 child: Container(
@@ -316,7 +331,7 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: HexColor("#634FF4"),
+                  backgroundColor: HexColor("#008FB7"),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),

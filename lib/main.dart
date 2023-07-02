@@ -1,6 +1,6 @@
+import 'package:distributor_oli/splash/splash.dart';
 import 'package:flutter/material.dart';
 // ignore: unused_import
-import 'package:distributor_oli/auth/login.dart';
 import 'package:get/get.dart';
 
 void main() async {
@@ -12,6 +12,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(debugShowCheckedModeBanner: false, home: Login());
+    return GetMaterialApp(debugShowCheckedModeBanner: false, home: Splash());
   }
 }
