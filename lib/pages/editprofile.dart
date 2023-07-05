@@ -27,6 +27,12 @@ class _EditProfileState extends State<EditProfile> {
           backgroundColor: Colors.white,
           foregroundColor: Colors.black,
           centerTitle: true,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              Get.back();
+            },
+          ),
         ),
         body: SingleChildScrollView(
           child: Column(

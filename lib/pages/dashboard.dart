@@ -8,6 +8,7 @@ import 'package:banner_carousel/banner_carousel.dart';
 // ignore_for_file: prefer_const_literals_to_create_immutables
 import 'package:distributor_oli/pages/notify.dart';
 import 'package:distributor_oli/pages/profile.dart';
+import 'package:distributor_oli/pages/retur/retur.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -106,38 +107,43 @@ class _DashboardState extends State<Dashboard> {
                   ),
                 ],
               ),
-              Column(
-                children: [
-                  Container(
-                    width: 70,
-                    height: 70,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: HexColor('#F4F3F4'),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 2,
-                          blurRadius: 5,
-                          offset: Offset(0, 4), // changes position of shadow
+              GestureDetector(
+                onTap: () {
+                  Get.to(Retur());
+                },
+                child: Column(
+                  children: [
+                    Container(
+                      width: 70,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: HexColor('#F4F3F4'),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 4), // changes position of shadow
+                          ),
+                        ],
+                      ),
+                      child: Center(
+                        child: Image.asset(
+                          "assets/icons/retur.png",
                         ),
-                      ],
-                    ),
-                    child: Center(
-                      child: Image.asset(
-                        "assets/icons/retur.png",
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Text(
-                    'Retur',
-                    style: GoogleFonts.poppins(
-                        fontSize: 14, fontWeight: FontWeight.w500),
-                  ),
-                ],
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      'Retur',
+                      style: GoogleFonts.poppins(
+                          fontSize: 14, fontWeight: FontWeight.w500),
+                    ),
+                  ],
+                ),
               ),
               Column(
                 children: [
