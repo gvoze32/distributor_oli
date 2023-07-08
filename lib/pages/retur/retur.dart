@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
+import 'package:distributor_oli/pages/retur/tambahretur.dart';
+
 //ignore: unused_import
 
 class Retur extends StatefulWidget {
@@ -31,7 +33,7 @@ class _ReturState extends State<Retur> {
           )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Add your onPressed code here!
+          Get.to(TambahRetur());
         },
         backgroundColor: HexColor('#008FB7'),
         child: Image.asset('assets/icons/add.png'),
