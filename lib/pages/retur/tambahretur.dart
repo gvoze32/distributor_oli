@@ -73,7 +73,7 @@ class _TambahReturState extends State<TambahRetur> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(),
+                    padding: const EdgeInsets.only(left: 20, right: 20),
                     child: SizedBox(
                       width: 370,
                       height: 50,
@@ -145,7 +145,7 @@ class _TambahReturState extends State<TambahRetur> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(),
+                    padding: const EdgeInsets.only(left: 20, right: 20),
                     child: SizedBox(
                       width: 370,
                       height: 50,
@@ -440,7 +440,7 @@ class _TambahReturState extends State<TambahRetur> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(),
+                    padding: const EdgeInsets.only(left: 20, right: 20),
                     child: SizedBox(
                       width: 370,
                       height: 50,
@@ -510,7 +510,7 @@ class _TambahReturState extends State<TambahRetur> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(),
+                    padding: const EdgeInsets.only(left: 20, right: 20),
                     child: SizedBox(
                       width: 370,
                       height: 50,
