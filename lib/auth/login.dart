@@ -120,7 +120,7 @@ class _LoginState extends State<Login> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(),
+                    padding: const EdgeInsets.only(left: 36, right: 36),
                     child: SizedBox(
                       width: 340,
                       height: 50,
@@ -197,7 +197,7 @@ class _LoginState extends State<Login> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(),
+                    padding: const EdgeInsets.only(left: 36, right: 36),
                     child: SizedBox(
                       width: 340,
                       height: 50,
@@ -273,45 +273,44 @@ class _LoginState extends State<Login> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 30),
-                        child: SizedBox(
-                          child: Checkbox(
-                            value: check,
-                            activeColor: HexColor("#008FB7"),
-                            onChanged: (bool? value) {
-                              setState(() {
-                                check = value;
-                              });
-                            },
-                          ),
-                        ),
-                      ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 36, right: 36),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              child: Checkbox(
+                                value: check,
+                                activeColor: HexColor("#008FB7"),
+                                onChanged: (bool? value) {
+                                  setState(() {
+                                    check = value;
+                                  });
+                                },
+                              ),
+                            ),
+                            Text(
+                              "Remember me",
+                              style: GoogleFonts.poppins(
+                                fontWeight: FontWeight.w500,
+                                color: HexColor("#014558"),
+                                fontSize: 12,
+                              ),
+                            )
+                          ]),
                       Text(
-                        "Remember me",
-                        style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w500,
-                          color: HexColor("#014558"),
-                          fontSize: 12,
-                        ),
-                      )
-                    ]),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 40),
-                      child: Text(
                         "Forgot Password ?",
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w500,
                           color: HexColor("#014558"),
                           fontSize: 12,
                         ),
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
               ],
             ),

@@ -64,7 +64,7 @@ class _DashboardState extends State<Dashboard> {
           BannerCarousel(
             banners: listBanners,
             height: 180,
-            viewportFraction: 0.89,
+            viewportFraction: 0.9,
             activeColor: Colors.black,
           ),
           SizedBox(
